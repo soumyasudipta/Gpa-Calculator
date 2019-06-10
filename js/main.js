@@ -17,9 +17,6 @@ jQuery(document).ready(function ($) {
     return false;
   });
 
-  // Initiate the wowjs
-  new WOW().init();
-
   // Initiate superfish on nav menu
   $('.nav-menu').superfish({
     animation: {
@@ -102,31 +99,6 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-
-  // Porfolio filter
-  $("#portfolio-flters li").click(function () {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
-
-    var selectedFilter = $(this).data("filter");
-    $("#portfolio-wrapper").fadeTo(100, 0);
-
-    $(".portfolio-item").fadeOut().css('transform', 'scale(0)');
-
-    setTimeout(function () {
-      $(selectedFilter).fadeIn(100).css('transform', 'scale(1)');
-      $("#portfolio-wrapper").fadeTo(300, 1);
-    }, 300);
-  });
-
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-  // custom code
-
 });
 
 //Grades Setter
@@ -191,7 +163,7 @@ function displayGPA() {
   if(isNaN(calculate))
       document.getElementById('GPA').innerHTML = "";
   else
-      document.getElementById('GPA').innerHTML = calculate.toPrecision(3);
+      document.getElementById('GPA').innerHTML = "Your GPA is : " + calculate.toPrecision(3);
 }
 
 //Calculate CGPA
@@ -236,7 +208,7 @@ function displayCGPA(){
       if(isNaN(totalGPA)||isNaN(totalCredits)||totalGPA == 0 || totalCredits == 0)
           document.getElementById('CGPA').innerHTML = "";
       else
-          document.getElementById('CGPA').innerHTML = calculate.toPrecision(3);
+          document.getElementById('CGPA').innerHTML = "Your CGPA is : " + calculate.toPrecision(3);
 } 
 
 //Resetter

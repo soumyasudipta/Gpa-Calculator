@@ -8,8 +8,8 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/logo.png" rel="icon">
+  
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
@@ -31,11 +31,12 @@
         <div class="container">
             <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="#hero">Home</a></li>
+                <li class="menu-active"><a href="#main">Home</a></li>
                 <li class="menu-has-children"><a href="">Course Credits</a>
                 <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                    <li><a href="#">CSE</a></li>
+                    <li><a href="#">ECE</a></li>
+                    <li><a href="#">MTSE</a></li>
                 </ul>
                 </li>
             </ul>
@@ -43,15 +44,13 @@
         </div>
     </header><!-- #header -->
 
-    <section id="hero">
-        <div class="hero-container">
+    <section id="main">
+        <div class="main-container">
             <h1>VIT-AP GPA Calculator</h1>
             <a href="#gpa" class="btn-main">Calculate GPA</a>
             <a href="#cgpa" class="btn-main">Calculate CGPA</a>
         </div>
-    </section><!-- #hero -->
-        
-    <main id="main">
+    </section><!-- #main -->
     
     <section id="gpa">
         
@@ -187,20 +186,50 @@
                                         </select>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <label for="credit9"><strong>Course 9:</strong></label>
+                                    </td>
+                                    <td>
+                                        <select class="credit" name="" id="credit9">
+                                            <option value="0" selected="selected">Select Credits</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="grade" name="" id="">
+                                            <option value="0" selected="selected">Select Grades</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="credit10"><strong>Course 10:</strong></label>
+                                    </td>
+                                    <td>
+                                        <select class="credit" name="" id="credit10">
+                                            <option value="0" selected="selected">Select Credits</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="grade" name="" id="">
+                                            <option value="0" selected="selected">Select Grades</option>
+                                        </select>
+                                    </td>
+                                </tr>
                             </table>
                             <div>
                                 <p>
                                     <strong id="errormsg1"></strong>
                                 </p>
-                                <button class="submitButton" onclick="reseterGPAcalc()">
-                                    <strong>Reset</strong>
-                                </button>
-                                <button class="submitButton" onclick="displayGPA()">
-                                    <strong>Calculate GPA</strong>
-                                </button>
                                 <p>
                                     <strong id="GPA"></strong>
                                 </p>
+                                <button class="btn btn-primary" onclick="reseterGPAcalc()">
+                                    Reset
+                                </button>
+                                <button class="btn btn-primary" onclick="displayGPA()">
+                                    Calculate GPA
+                                </button>
                             </div>
                         </div>                
                     </section>
@@ -309,28 +338,60 @@
                                         <input type="number" class="perSemCredits" name="" id="" placeholder="17 - 27">
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <label for="semGPA9"><strong>Semester 9:</strong></label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="perSemGPA" name="" id="semGPA9" placeholder="0 - 10">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="perSemCredits" name="" id="" placeholder="17 - 27">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="semGPA10"><strong>Semester 10:</strong></label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="perSemGPA" name="" id="semGPA10" placeholder="0 - 10">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="perSemCredits" name="" id="" placeholder="17 - 27">
+                                    </td>
+                                </tr>
                             </table>
                             <div>
                                 <p>*Fill it till the completed semester</p>
                                 <p>
                                     <strong id="errormsg2"></strong>
                                 </p>
-                                <button class="submitButton" onclick="reseterCGPAcalc()">
-                                    <strong>Reset</strong>
-                                </button>
-                                <button class="submitButton" onclick="displayCGPA()">
-                                    <strong>Calculate CGPA</strong>
-                                </button>
                                 <p>
                                     <strong id="CGPA"></strong>
                                 </p>
+                                <button class="btn btn-primary" onclick="reseterCGPAcalc()">
+                                    Reset
+                                </button>
+                                <button class="btn btn-primary" onclick="displayCGPA()">
+                                    Calculate CGPA
+                                </button>
                             </div>                 
                         </div>                 
                     </section>
                     <section class="col-lg-2"></section>
                 </section>   
             </div>
-    </section><!-- #about -->
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong>hackstaticboss</strong>
+          </div>
+        </div>
+      </footer><!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
       <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
